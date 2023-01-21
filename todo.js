@@ -1,4 +1,7 @@
-//Todo Application
+//*************************************TASK************************************************//
+//Build a simple To-do list Console application. The user of this application should be able to add, delete, and update items in the To-do app.
+
+//************************************SOLUTION*********************************************//
 
 //Import prompt Library
 prompt = require("prompt-sync")();
