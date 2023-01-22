@@ -21,8 +21,8 @@ let todoList = [];
 // Add todos to your todoList
 const addTodos = () => {
   // Collect User Inputs
-  let Mytodos = prompt("What do you want to add to your todo list");
-  let todoPriority = prompt("What is your todoPriority");
+  let Mytodos = prompt("What do you want to add to your todo list? ");
+  let todoPriority = prompt("What is your todoPriority? ");
   todoList.push({
     // Create an Object with the following {key:value} pairs
     id: Math.round(Math.random() * 20),
@@ -83,9 +83,7 @@ while (makingChoice === true) {
   );
 
   choice = prompt("Enter your choice: ");
-  // choice = prompt(
-  //   " Choose from the following options:\n C.Create Todos  \n R. Read TodoList \n U. Update Todos \n D.Delete a todo from your todoList \n Q. Exit Application \n\n"
-  // );
+
   // Converts choice to lowercase
   choice = choice.toLowerCase();
 
@@ -148,7 +146,7 @@ while (makingChoice === true) {
     // If the user wants to update the todoList
   } else if (choice == "u") {
     //
-    let id = prompt("What is the id of the item you want to update?");
+    let id = prompt("What is the id of the item you want to update? ");
     let item;
     let priority;
     let isComplete;
@@ -162,14 +160,14 @@ while (makingChoice === true) {
 
       updateChoice = Number(updateChoice);
       if (updateChoice === 1) {
-        item = prompt("What is the new name of the item you are updating");
+        item = prompt("What is the new name of the item you are updating? ");
       }
 
       if (updateChoice === 2) {
-        priority = prompt("What is the new priority for this todos");
+        priority = prompt("What is the new priority for this todos? ");
       }
       if (updateChoice === 3) {
-        isComplete = prompt("Are you done with this Todo?");
+        isComplete = prompt("Are you done with this Todo? ");
       }
       t = false;
       break;
@@ -186,7 +184,7 @@ while (makingChoice === true) {
     console.log("");
 
     try {
-      let myTodoId = prompt("What is the Todo Id you want to delete");
+      let myTodoId = prompt("What is the Todo Id you want to delete ");
       myTodoId = Number(myTodoId);
       console.log(deleteTodos(myTodoId));
     } catch (error) {
