@@ -77,9 +77,15 @@ while (makingChoice === true) {
     console.log("Okay Bye");
     break;
   }
-  choice = prompt(
+
+  console.log(
     " Choose from the following options:\n C.Create Todos  \n R. Read TodoList \n U. Update Todos \n D.Delete a todo from your todoList \n Q. Exit Application \n\n"
   );
+
+  choice = prompt("Enter your choice: ");
+  // choice = prompt(
+  //   " Choose from the following options:\n C.Create Todos  \n R. Read TodoList \n U. Update Todos \n D.Delete a todo from your todoList \n Q. Exit Application \n\n"
+  // );
   // Converts choice to lowercase
   choice = choice.toLowerCase();
 
@@ -98,7 +104,7 @@ while (makingChoice === true) {
   }
 
   // If the user wants to create a todo
-  if (choice === "r") {
+  else if (choice === "r") {
     if (todoList.length < 1) {
       console.log("");
       console.log("");
@@ -149,18 +155,20 @@ while (makingChoice === true) {
 
     let t = true;
     while (t === true) {
-      let o = prompt(
+      console.log(
         "Which of this do you want to update? \n1- Item \n2- Priority \n3- IsComplete\n >>>>>  "
       );
-      o = Number(o);
-      if (o === 1) {
+      let updateChoice = prompt("What is your choice?");
+
+      updateChoice = Number(updateChoice);
+      if (updateChoice === 1) {
         item = prompt("What is the new name of the item you are updating");
       }
 
-      if (o === 2) {
+      if (updateChoice === 2) {
         priority = prompt("What is the new priority for this todos");
       }
-      if (o === 3) {
+      if (updateChoice === 3) {
         isComplete = prompt("Are you done with this Todo?");
       }
       t = false;
